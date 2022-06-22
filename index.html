@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="TON Frogs NFT collection based on The Open Network Blockchain, includes 5 555 unique items"
+    />
+    <meta property="og:url" content="https://tonfrogs.org" />
+    <meta property="og:title" content="TON Frogs NFT collection " />
+    <meta
+      property="og:description"
+      content="TON Frogs NFT collection based on The Open Network Blockchain, includes 5 555 unique items"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="img/og-image.png" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <!-- Critical -->
+    <style>
+      *,
+      *::before,
+      *::after {
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      img,
+      video {
+        max-width: 100%;
+        -o-object-fit: cover;
+           object-fit: cover;
+        height: auto;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        color: #fff;
+        background-color: #010101;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 1.4;
+        overflow-x: hidden;
+      }
+      [data-aos="up-before"]::before {
+        -webkit-transform: translateY(20%);
+            -ms-transform: translateY(20%);
+                transform: translateY(20%);
+        -webkit-transition-property: -webkit-transform;
+        transition-property: -webkit-transform;
+        -o-transition-property: transform;
+        transition-property: transform;
+        transition-property: transform, -webkit-transform;
+      }
+      [data-aos="up-before"].aos-animate::before {
+        -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+                transform: translateY(0);
+      }
+      .overflow-hidden {
+        overflow: hidden;
+      }
+      .overflow-hidden body {
+        overflow: hidden;
+      }
+      .container {
+        padding: 0 15px;
+        margin: 0 auto;
+        padding: 0 80px;
+        max-width: 1440px;
+      }
+      .main__title {
+        font-family: "Dela Gothic One", sans-serif;
+        font-weight: 400;
+        font-size: 70px;
+        line-height: 1.1;
+        text-transform: uppercase;
+        margin-bottom: 78px;
+      }
+      .navigation ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin: 0 -28px;
+      }
+      .navigation li {
+        margin: 0 28px;
+        font-weight: 600;
+      }
+      .navigation a {
+        -webkit-transition: color 0.3s ease;
+        -o-transition: color 0.3s ease;
+        transition: color 0.3s ease;
+      }
+      .navigation a:hover {
+        color: #038aff;
+      }
+      .page-wrapper {
+        position: relative;
+        overflow: hidden;
+      }
+      .page-wrapper::before {
+        content: "";
+        position: absolute;
+        width: 933px;
+        height: 984px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: -580px;
+        background: #cdcdcd;
+        opacity: 0.2;
+        -webkit-filter: blur(170px);
+                filter: blur(170px);
+      }
+      .header {
+        padding: 10px 0;
+        background: rgba(34, 35, 37, 0.2);
+        -webkit-backdrop-filter: blur(25px);
+                backdrop-filter: blur(25px);
+        position: relative;
+        z-index: 4;
+      }
+      .header__inner {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+      }
+      .header__languages {
+        margin-left: 80px;
+      }
+      .header__languages ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin: 0 -8px;
+      }
+      .header__languages li {
+        margin: 0 8px;
+        font-weight: 600;
+      }
+      .header__languages li.active {
+        opacity: 0.6;
+      }
+      .header__socials {
+        margin-left: 60px;
+      }
+      .header__burger {
+        display: none;
+        margin-left: 55px;
+      }
+      .header__burger span {
+        display: block;
+        width: 30px;
+        height: 2px;
+        background-color: #f8f8f8;
+        margin-bottom: 6px;
+      }
+      .header__burger span:last-child {
+        margin-bottom: 0;
+      }
+      .header__menu-close {
+        display: none;
+      }
+      .hero {
+        position: relative;
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        width: 431px;
+        height: 454px;
+        left: -207px;
+        top: 353px;
+        background: #cdcdcd;
+        opacity: 0.2;
+        -webkit-filter: blur(170px);
+                filter: blur(170px);
+      }
+      .hero__caption {
+        margin-bottom: 22px;
+      }
+      .hero__inner {
+        padding-top: 115px;
+        padding-bottom: 500px;
+        position: relative;
+      }
+      .hero__row {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+      }
+      .hero__title {
+        margin-bottom: 45px;
+      }
+      .hero__text {
+        max-width: 506px;
+        margin-bottom: 95px;
+      }
+      .hero__btn {
+        background: #ffffff;
+        -webkit-box-shadow: 0px 0px 50px #0085ff;
+                box-shadow: 0px 0px 50px #0085ff;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        padding: 17px 30px;
+        text-align: center;
+        color: #010101;
+        width: 280px;
+        position: relative;
+        z-index: 4;
+      }
+      .hero__btn img {
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+        margin-right: 6px;
+      }
+      .hero__media {
+        margin-left: 120px;
+      }
+      .hero__media-item {
+        border-radius: 13px;
+        width: 373px;
+        height: 518px;
+        background: url("img/card-border.svg") center no-repeat;
+        -webkit-backdrop-filter: blur(4px);
+                backdrop-filter: blur(4px);
+      }
+      .hero__media-item--gold {
+        background-image: url("img/card-gold.png");
+        z-index: 3;
+        position: relative;
+      }
+      .hero__media-item--silver {
+        background-image: url("img/card-silver.png");
+        width: 374px;
+        height: 520px;
+        position: absolute;
+        right: 185px;
+        top: 160px;
+        -webkit-transform: rotate(0);
+            -ms-transform: rotate(0);
+                transform: rotate(0);
+        -webkit-transition: 1s ease;
+        -o-transition: 1s ease;
+        transition: 1s ease;
+      }
+      .hero__media-item--platinum {
+        position: absolute;
+        height: 516px;
+        width: 371px;
+        background-image: url("img/card-platinum.png");
+        right: 185px;
+        top: 160px;
+        -webkit-transform: rotate(0);
+            -ms-transform: rotate(0);
+                transform: rotate(0);
+        -webkit-transition: 1s ease;
+        -o-transition: 1s ease;
+        transition: 1s ease;
+      }
+      .hero__media-item--platinum .hero__media-body video {
+        z-index: 3;
+      }
+      .hero__media-body {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      .hero__media-body video {
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+        bottom: 30px;
+        z-index: 5;
+        max-width: none;
+        /* object-fit: none; */
+      }
+      @media screen and (max-width: 900px) {
+        .hero__media-body video {
+          bottom: 40px;
+          width: 260px;
+          max-width: none;
+        }
+      }
+      @media screen and (max-width: 800px) {
+        .hero__title {
+          font-size: 36px;
+        }
+      }
+    </style>
+    <!-- Critical -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      href="styles/media.css"
+      rel="stylesheet"
+      media="screen and (max-width: 1200px)"
+    />
+    <title>TON Frogs NFT collection</title>
+  </head>
+  <body>
+    <div class="page-wrapper main">
+      <header class="header">
+        <div class="container">
+          <div class="header__inner">
+            <div class="header__menu">
+              <nav class="header__navigation navigation">
+                <ul>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#integrations">Integrations</a></li>
+                  <li><a href="#roadmap">Roadmap</a></li>
+                  <li><a href="#team">Team</a></li>
+                </ul>
+              </nav>
+              <div class="header__menu-close">
+                <img src="img/close.svg" alt="Close menu" />
+              </div>
+            </div>
+            <div class="header__languages">
+              <ul>
+                <li><a href="index.html">En</a></li>
+                <li class="active"><a href="index-ru.html">Ru</a></li>
+              </ul>
+            </div>
+            <div class="header__socials socials">
+              <ul>
+                <li>
+                  <a
+                    href="https://t.me/tonfrogs_en"
+                    target="_blank"
+                    rel="noopener"
+                    ><img src="img/telegram.svg" alt="telegram"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://twitter.com/tonfrogs"
+                    target="_blank"
+                    rel="noopener"
+                    ><img src="img/twitter.svg" alt="twitter"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://instagram.com/tonfrogs"
+                    target="_blank"
+                    rel="noopener"
+                    ><img src="img/instagram.svg" alt="instagram"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.tiktok.com/@tonfrogs"
+                    rel="noopener"
+                    target="_blank"
+                    ><img src="img/tik-tok.svg" alt="tik-tok"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://getgems.io/collection/ton-frogs"
+                    rel="noopener"
+                    target="_blank"
+                    ><img src="img/getgems.svg" alt="getgems"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <div class="header__burger">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+        <div class="header__overlay"></div>
+      </header>
+      <section class="hero">
+        <div class="container">
+          <div class="hero__inner">
+            <div class="hero__caption">
+              limited NFT collection on The Open Network
+            </div>
+            <div class="hero__row">
+              <div class="hero__content">
+                <h1
+                  class="hero__title main__title"
+                  data-aos-once="true"
+                  data-aos="flip-left"
+                >
+                  Welcome to <br />
+                  <span>TON Frogs</span>
+                </h1>
+                <div class="hero__text main__text">
+                  Our exclusive set of 5,555 unique 3D frogs will leave none of
+                  you indifferent
+                </div>
+                <a
+                  href="https://getgems.io/collection/ton-frogs"
+                  class="hero__btn"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img src="img/getgems-2.svg" alt="getgems" />
+                  <span>GetGems</span>
+                </a>
+              </div>
+              <div class="hero__media">
+                <div class="hero__media-item hero__media-item--gold">
+                  <div class="hero__media-body">
+                    <video
+                      class="lazy"
+                      width="600"
+                      autoplay
+                      muted
+                      playsinline
+                      loop
+                    >
+                      <source
+                        data-src="video/jogger_600_safari.mp4"
+                        type='video/mp4; codecs="hvc1"'
+                      />
+                      <source
+                        data-src="video/jogger_600_chrome.webm"
+                        type="video/webm"
+                      />
+                    </video>
+                  </div>
+                </div>
+                <div
+                  class="hero__media-item hero__media-item--silver"
+                  data-aos-once="true"
+                  data-aos="frog-left"
+                  data-aos-delay="300"
+                  data-aos-mirror="true"
+                >
+                  <div class="hero__media-body">
+                    <video
+                      class="lazy"
+                      width="600"
+                      autoplay
+                      muted
+                      playsinline
+                      loop
+                    >
+                      <source
+                        data-src="video/superfrog_600_safari.mp4"
+                        type='video/mp4; codecs="hvc1"'
+                      />
+                      <source
+                        data-src="video/superfrog_600_chrome.webm"
+                        type="video/webm"
+                      />
+                    </video>
+                  </div>
+                </div>
+                <div
+                  class="hero__media-item hero__media-item--platinum"
+                  data-aos-once="true"
+                  data-aos="frog-right"
+                  data-aos-delay="300"
+                  data-aos-mirror="true"
+                >
+                  <div class="hero__media-body">
+                    <video
+                      class="lazy"
+                      width="600"
+                      autoplay
+                      muted
+                      playsinline
+                      loop
+                    >
+                      <source
+                        data-src="video/starwars_600_safari.mp4"
+                        type='video/mp4; codecs="hvc1"'
+                      />
+                      <source
+                        data-src="video/starwars_600_chrome.webm"
+                        type="video/webm"
+                      />
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="container">
+          <div class="about__inner">
+            <div class="about__head">
+              <h1
+                class="about__title main__title"
+                data-aos-once="true"
+                data-aos="flip-left"
+                id="about"
+              >
+                What is <br />
+                <span>TON Frogs</span>
+              </h1>
+              <div class="about__caption" data-da=".about__inner, 800, 4">
+                Our team aims to develop an entire entertainment culture on The
+                Open Network blockchain. <br />
+                TON Frogs is a limited NFT collection on TON
+              </div>
+              <div class="about__text main__text">
+                Frog is a symbol and talisman that brings real success and
+                wealth to its lucky owner
+              </div>
+            </div>
+            <div class="about__media-wrapper">
+              <div class="about__crystall about__crystall--1">
+                <img src="img/crystall-1.png" alt="crystall" />
+              </div>
+              <div class="about__crystall about__crystall--2">
+                <img src="img/crystall-2.png" alt="crystall" />
+              </div>
+              <div class="about__crystall about__crystall--3">
+                <img src="img/crystall-3.png" alt="crystall" />
+              </div>
+              <div class="about__crystall about__crystall--4">
+                <img src="img/crystall-4.png" alt="crystall" />
+              </div>
+              <div class="about__media circle-parallax">
+                <video
+                  class="lazy"
+                  width="920"
+                  poster="img/faraon.webp"
+                  muted
+                  autoplay
+                  playsinline
+                  loop
+                >
+                  <source
+                    data-src="video/faraon_600_safari.mp4"
+                    type='video/mp4; codecs="hvc1"'
+                  />
+                  <source
+                    data-src="video/faraon_600_chrome.webm"
+                    type="video/webm"
+                  />
+                </video>
+              </div>
+              <div class="about__stat" data-da=".about__inner, 800, 3">
+                <strong id="items-count">5 555</strong>
+                <span>unique items</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="integrations">
+        <div class="container">
+          <div class="integrations__inner">
+            <h1
+              class="integrations__title main__title"
+              data-aos-once="true"
+              data-aos="flip-left"
+              id="integrations"
+            >
+              <span>integrations</span>
+            </h1>
+            <div
+              class="integrations__content"
+              data-aos-once="true"
+              data-aos="up-before"
+              data-aos-once="true"
+              data-aos-delay="150"
+            >
+              <div class="integrations__buttons">
+                <a
+                  href="https://ton.diamonds"
+                  class="integrations__btn"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img src="img/website.svg" alt="" />
+                  <span>Website</span>
+                </a>
+                <a
+                  href="https://t.me/tondiamonds"
+                  class="integrations__btn"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <img src="img/telegram.svg" alt="" />
+                  <span>Telegram</span>
+                </a>
+              </div>
+              <div class="integrations__info">
+                <div class="integrations__logo">
+                  <img src="img/ton-logo.svg" alt="" />
+                </div>
+                <div class="integrations__text">
+                  We select the best NFT collections by quality and value. The
+                  presence of TON Diamonds gives you a chance to get NFT for
+                  free, as well as access to the priority purchase of partner
+                  collections
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="roadmap">
+        <div class="container">
+          <div class="roadmap__inner">
+            <h1
+              class="roadmap__title main__title"
+              data-aos-once="true"
+              data-aos="flip-left"
+              id="roadmap"
+            >
+              <span>roadmap</span>
+            </h1>
+            <div class="roadmap__boxes">
+              <div class="roadmap__box">
+                <div class="roadmap__box-title" data-aos="fade-down">q2</div>
+                <ul>
+                  <li
+                    data-aos="fade-down"
+                    data-aos-once="true"
+                    data-aos-delay="100"
+                  >
+                    Creation of a 3D collection of 5555 NFTs
+                  </li>
+                  <li
+                    data-aos="fade-down"
+                    data-aos-once="true"
+                    data-aos-delay="200"
+                  >
+                    Launch of Social Media
+                  </li>
+                  <li
+                    data-aos="fade-down"
+                    data-aos-once="true"
+                    data-aos-delay="300"
+                  >
+                    Starting a PR company
+                  </li>
+                  <li
+                    data-aos="fade-down"
+                    data-aos-once="true"
+                    data-aos-delay="400"
+                  >
+                    Launch of the first version of the site
+                  </li>
+                  <li
+                    data-aos="fade-down"
+                    data-aos-once="true"
+                    data-aos-delay="500"
+                  >
+                    First presale
+                  </li>
+                </ul>
+              </div>
+              <div class="roadmap__box">
+                <div class="roadmap__box-title">q3</div>
+                <ul>
+                  <li>
+                    Collaboration with top collections on the TON Blockchain
+                  </li>
+                  <li
+                    data-aos="fade-down"
+                    data-aos-once="true"
+                    data-aos-delay="250"
+                  >
+                    Lottery of some cool prizes
+                  </li>
+                  <li
+                    data-aos="fade-down"
+                    data-aos-once="true"
+                    data-aos-delay="300"
+                  >
+                    Marketing campaign
+                  </li>
+                  <li
+                    data-aos="fade-down"
+                    data-aos-once="true"
+                    data-aos-delay="350"
+                  >
+                    Second presale
+                  </li>
+                  <li
+                    data-aos="fade-down"
+                    data-aos-once="true"
+                    data-aos-delay="450"
+                  >
+                    Minting and collection launch
+                  </li>
+                  <li
+                    data-aos="fade-down"
+                    data-aos-once="true"
+                    data-aos-delay="550"
+                  >
+                    Launch of the main version of the site
+                  </li>
+                  <li
+                    data-aos="fade-down"
+                    data-aos-once="true"
+                    data-aos-delay="650"
+                  >
+                    Launching a merchandise store and distributing it to owners
+                    of rare TON Frogs
+                  </li>
+                </ul>
+              </div>
+              <div class="roadmap__box">
+                <div class="roadmap__box-title">q4</div>
+                <ul>
+                  <li
+                    data-aos="fade-down"
+                    data-aos-once="true"
+                    data-aos-delay="300"
+                  >
+                    Stickers
+                  </li>
+                  <li
+                    data-aos="fade-down"
+                    data-aos-once="true"
+                    data-aos-delay="400"
+                  >
+                    Printing real 3D TON Frog figures
+                  </li>
+                  <li
+                    data-aos="fade-down"
+                    data-aos-once="true"
+                    data-aos-delay="500"
+                  >
+                    Сartoons
+                  </li>
+                  <li
+                    data-aos="fade-down"
+                    data-aos-once="true"
+                    data-aos-delay="600"
+                  >
+                    TON Frogs cash back
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="team">
+        <div class="container">
+          <div class="team__inner">
+            <h1
+              class="team__title main__title"
+              data-aos-once="true"
+              data-aos="flip-left"
+              id="team"
+            >
+              <span>team</span>
+            </h1>
+            <div class="team__list circle-parallax">
+              <div class="team__row">
+                <div
+                  class="team__item"
+                  data-aos="fade-down"
+                  data-aos-once="true"
+                >
+                  <div class="team__item-body">
+                    <video
+                      class="lazy"
+                      height="335"
+                      poster="img/doc.webp"
+                      autoplay
+                      muted
+                      playsinline
+                      loop
+                    >
+                      <source
+                        data-src="video/doc_600_safari.mp4"
+                        type='video/mp4; codecs="hvc1"'
+                      />
+                      <source
+                        data-src="video/doc_600_chrome.webm"
+                        type="video/webm"
+                      />
+                    </video>
+                  </div>
+                  <div class="team__item-footer">
+                    <div class="team__position">Ceo TON Frogs</div>
+                    <div class="team__name">Narek Mkhoyan</div>
+                  </div>
+                </div>
+                <div class="team__subrow">
+                  <div
+                    class="team__item"
+                    data-aos="fade-down"
+                    data-aos-once="true"
+                    data-aos-delay="200"
+                  >
+                    <div class="team__item-body">
+                      <video
+                        class="lazy"
+                        height="335"
+                        poster="img/spacex.webp"
+                        autoplay
+                        muted
+                        playsinline
+                        loop
+                      >
+                        <source
+                          data-src="video/spacex_600_safari.mp4"
+                          type='video/mp4; codecs="hvc1"'
+                        />
+                        <source
+                          data-src="video/spacex_600_chrome.webm"
+                          type="video/webm"
+                        />
+                      </video>
+                    </div>
+                    <div class="team__item-footer">
+                      <div class="team__position">Art-Director</div>
+                      <div class="team__name">Amal’ Gabrelian</div>
+                    </div>
+                  </div>
+                  <div
+                    class="team__item"
+                    data-aos="fade-down"
+                    data-aos-once="true"
+                    data-aos-delay="350"
+                  >
+                    <div class="team__item-body">
+                      <video
+                        class="lazy"
+                        height="335"
+                        poster="img/venom.webp"
+                        autoplay
+                        muted
+                        playsinline
+                        loop
+                      >
+                        <source
+                          data-src="video/venom_600_safari.mp4"
+                          type='video/mp4; codecs="hvc1"'
+                        />
+                        <source
+                          data-src="video/venom_600_chrome.webm"
+                          type="video/webm"
+                        />
+                      </video>
+                    </div>
+                    <div class="team__item-footer">
+                      <div class="team__position">3D Generalist</div>
+                      <div class="team__name">Yuryi Artcybashev</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="team__row">
+                <div
+                  class="team__item"
+                  data-aos="fade-down"
+                  data-aos-once="true"
+                  data-aos-delay="450"
+                >
+                  <div class="team__item-body">
+                    <video
+                      class="lazy"
+                      height="335"
+                      poster="img/starwars.webp"
+                      autoplay
+                      muted
+                      playsinline
+                      loop
+                    >
+                      <source
+                        data-src="video/starwars_600_safari.mp4"
+                        type='video/mp4; codecs="hvc1"'
+                      />
+                      <source
+                        data-src="video/starwars_600_chrome.webm"
+                        type="video/webm"
+                      />
+                    </video>
+                  </div>
+                  <div class="team__item-footer">
+                    <div class="team__position">3D Animator</div>
+                    <div class="team__name">Alex Glintveyn</div>
+                  </div>
+                </div>
+                <div
+                  class="team__item"
+                  data-aos="fade-down"
+                  data-aos-once="true"
+                  data-aos-delay="550"
+                >
+                  <div class="team__item-body">
+                    <video
+                      class="lazy"
+                      height="335"
+                      poster="img/frog-1.webp"
+                      autoplay
+                      muted
+                      playsinline
+                      loop
+                    >
+                      <source
+                        data-src="video/superfrog_600_safari.mp4"
+                        type='video/mp4; codecs="hvc1"'
+                      />
+                      <source
+                        data-src="video/superfrog_600_chrome.webm"
+                        type="video/webm"
+                      />
+                    </video>
+                  </div>
+                  <div class="team__item-footer">
+                    <div class="team__position">3D Animation & Gamedev</div>
+                    <div class="team__name">Abdumalik Tokhirov</div>
+                  </div>
+                </div>
+                <div
+                  class="team__item"
+                  data-aos="fade-down"
+                  data-aos-once="true"
+                  data-aos-delay="650"
+                >
+                  <div class="team__item-body">
+                    <video
+                      class="lazy"
+                      height="335"
+                      poster="img/alien.webp"
+                      autoplay
+                      muted
+                      playsinline
+                      loop
+                    >
+                      <source
+                        data-src="video/alien_600_safari.mp4"
+                        type='video/mp4; codecs="hvc1"'
+                      />
+                      <source
+                        data-src="video/alien_600_chrome.webm"
+                        type="video/webm"
+                      />
+                    </video>
+                  </div>
+                  <div class="team__item-footer">
+                    <div class="team__position">3D Artist</div>
+                    <div class="team__name">ivan prudnikov</div>
+                  </div>
+                </div>
+                <div
+                  class="team__item"
+                  data-aos="fade-down"
+                  data-aos-once="true"
+                  data-aos-delay="750"
+                >
+                  <div class="team__item-body">
+                    <video
+                      class="lazy"
+                      height="335"
+                      poster="img/rembo.webp"
+                      autoplay
+                      muted
+                      playsinline
+                      loop
+                    >
+                      <source
+                        data-src="video/rembo_600_safari.mp4"
+                        type='video/mp4; codecs="hvc1"'
+                      />
+                      <source
+                        data-src="video/rembo_600_chrome.webm"
+                        type="video/webm"
+                      />
+                    </video>
+                  </div>
+                  <div class="team__item-footer">
+                    <div class="team__position">2D Artist TON Frogs</div>
+                    <div class="team__name">vadim kusnarenko</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__inner">
+            <nav class="footer__navigation navigation">
+              <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#integrations">Integrations</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#team">Team</a></li>
+              </ul>
+            </nav>
+            <div class="footer__logo">
+              <span>Based on ton</span>
+              <img src="img/ton.svg" alt="" />
+            </div>
+            <div class="footer__socials socials">
+              <ul>
+                <li>
+                  <a
+                    href="https://t.me/tonfrogs_en"
+                    target="_blank"
+                    rel="noopener"
+                    ><img src="img/telegram.svg" alt="telegram"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://twitter.com/tonfrogs"
+                    target="_blank"
+                    rel="noopener"
+                    ><img src="img/twitter.svg" alt="twitter"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://instagram.com/tonfrogs"
+                    target="_blank"
+                    rel="noopener"
+                    ><img src="img/instagram.svg" alt="instagram"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.tiktok.com/@tonfrogs"
+                    rel="noopener"
+                    target="_blank"
+                    ><img src="img/tik-tok.svg" alt="tik-tok"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://getgems.io/collection/ton-frogs"
+                    rel="noopener"
+                    target="_blank"
+                    ><img src="img/getgems.svg" alt="getgems"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__policy">
+              2022 TON Frogs 3D NFT <br />
+              All Rights Reserved ©
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/dynamicAdapt.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
